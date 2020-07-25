@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <h1>day-5 Assignment</h1>
+    </head>
+    <body>
+        <script>
+            class User{
+                constructor(name,age,email){
+                    this.name=name;
+                    this.age=age;
+                    this.email=email;
+                    this.coins=0;
+                    this.courses=[];
+                    
+                }
+        
+                
+             login(){
+              console.log(`you are logged in ${this.name}`);
+              return this;
+                }
+                logout(){
+              console.log(`you are logged out ${this.name}`);
+              return this;
+                }
+               
+                }
+            
+            class Moderator extends User{
+                addCoins(){
+                    this.coins++;
+                    console.log(`${this.name} has ${this.coins} coins`);
+                       return this;
+                }
+             removeCoins(){
+                 this.coins--;
+                 console.log(`${this.name} has ${this.coins} coins`);
+                       return this;
+             }
+            
+            }
+            class Admin extends Moderator{
+                addCourse(user,course1,course2){
+                user2.courses.push(course1,course2);
+                    console.log(user2);
+                }
+                }
+                let user2=new User('kamal',26,'kamal@gmail.com');
+                let admin = new Admin('surya',24,'surya@gmail.com');
+                    admin.addCourse(user2,'javascript','java');
+       
+                let mod=new Moderator('vimal',15,'vimal@gmail.com');
+                    mod.addCoins();
+                    mod.addCoins();
+                    mod.removeCoins();
+         
+        </script>  
+        
+    </body>
+</html>
